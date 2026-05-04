@@ -17,4 +17,4 @@ El objetivo es determinar en qué días conviene entrenar y en cuáles descansar
 python3 tp2.py ruta/a/entrada.txt
 ```
 ## Informe
-[ver informe completo](https://github.com/PaulaRomano-fiuba/TP1-TDA/blob/main/Informe/TP1__Algoritmos_Greedy.pdf)
+[ver informe completo](https://github.com/PaulaRomano-fiuba/TP2-TDA/blob/main/TP2__Algoritmo_PD%20(1).pdf)
