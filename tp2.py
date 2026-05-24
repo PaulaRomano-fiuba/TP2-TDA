@@ -30,19 +30,19 @@ def main():
 
 
 def crear_matriz(dias, energias):
-    n = len(dias)
+    n = len(dias)   
     matriz = [[0] * (n+1) for _ in range(n+1)]
     
     # Caso base: no quedan días
-    for fila in range(n+1):
-        matriz[fila][n] = 0
+    for días_consecutivos in range(n+1):
+        matriz[días_consecutivos][n] = 0
 
     # Llenado de derecha a izquierda
-    for col in range(n-1, -1, -1):
-        for fila in range(col+1):
-            matriz[fila][col] = max(
-                matriz[0][col+1],  # descansar
-                ganancia_hoy(dias, col, energias, fila) + matriz[fila+1][col+1]  # entrenar
+    for día_actual in range(n-1, -1, -1):
+        for días_consecutivos in range(día_actual+1):
+            matriz[días_consecutivos][día_actual] = max(
+                matriz[0][día_actual+1],  # descansar
+                ganancia_hoy(dias, día_actual, energias, días_consecutivos) + matriz[días_consecutivos+1][día_actual+1]  # entrenar
             )
     
     return matriz
