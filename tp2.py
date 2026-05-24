@@ -33,10 +33,6 @@ def crear_matriz(dias, energias):
     n = len(dias)   
     matriz = [[0] * (n+1) for _ in range(n+1)]
     
-    # Caso base: no quedan días
-    for días_consecutivos in range(n+1):
-        matriz[días_consecutivos][n] = 0
-
     # Llenado de derecha a izquierda
     for día_actual in range(n-1, -1, -1):
         for días_consecutivos in range(día_actual+1):
